@@ -1,12 +1,14 @@
 package com.example.graficador;
 
-import android.os.Bundle;
+import org.json.JSONObject;
+
+import controlador.*;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class Login extends Activity {
 
@@ -21,6 +23,9 @@ public class Login extends Activity {
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLogin
         .requestFocus();
+        JSONObject jb = JSONManager.getJSONfromURL("http://200.23.107.50:8083/siiecon.asmx/lstSistemasPlantel");
+        
+        
         
         btnLogin.setOnClickListener(new View.OnClickListener() {
 			
