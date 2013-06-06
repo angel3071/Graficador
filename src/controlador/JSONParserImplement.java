@@ -1,5 +1,4 @@
-package com.Graphsraphs;
-
+package controlador;
 import java.util.HashMap;
 
 public class JSONParserImplement {
